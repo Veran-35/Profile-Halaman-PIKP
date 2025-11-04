@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda PIKP</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        header {
+            transition: all .25s ease-in-out;
+        }
+
+        body {
+            background: radial-gradient(circle, #ededef88 10%, transparent 11%);
+            background-size: 3em 3em;
+            background-color: #ffffff;
+            opacity: 1
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+        .fade-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fade-effect::before,
+        .fade-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3%;
+            /* Lebar efek memudar */
+            z-index: 2;
+        }
+
+        .fade-effect::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+
+        .fade-effect::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+
+        .test a {
+            color: black !important;
+        }
+
+        .test a:hover,
+        .test a:focus,
+        .test a:focus-within {
+            color: gray !important;
+        }
+
+
+        #profile-nav {
+            display: block;
+        }
+
+        #profil-nav:hover #inner-nav {
+            display: flex !important;
+        }
+
+        .mudar:hover{
+            color: rgb(102, 102, 102) !important;
+        }
+
+        .fix-the-color{
+            color: black !important;
+        }
+
+        .fix-the-color:hover{
+            color: rgba(0, 0, 0, 0.6) !important;
+        }
+
+        .carousel-inner, .carousel-item{
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: brightness(50%);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B6282258332033&text&type=phone_number&app_absent=0"
+        style="display: flex; align-items: center; justify-content: center; position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background-color: #25d366; z-index: 6; border-radius: 50%; border: solid 2px white;">
+        <i style="color: white; font-size: 1.5rem;" class="bi bi-whatsapp"></i>
+    </a>
+
+    <header class="position-fixed  top-0 w-100 text-white py-3 z-3" id="target-this">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="index.html"><img src="./asset/logo(1).svg" class="bg-white rounded-pill"></a>
+                </div>
+                <div class="d-flex gap-4">
+                    <a href="#" class="link-light text-decoration-none fw-bold">Beranda</a>
+                    <div class=" text-decoration-none fw-bold pota " style="position: relative;"
+                        id="profil-nav">Profil
+
+                        <div id="inner-nav"
+                            style="width: 200px; display: none; flex-direction: column; position: absolute; left: 0; top: 25px; background-color: white; padding: 18px; border-radius: 6px;">
+                            <a href="visi&misi.html" class="mb-3 link-dark text-decoration-none mudar">Visi & Misi</a>
+                            <a href="/struktur-pikp.html" class="link-dark text-decoration-none mudar">Struktur Organisasi</a>
+                        </div>
+                    </div>
+                    <a href="pelatihan.html" class="link-light text-decoration-none fw-bold">Pelatihan</a>
+                    <a href="#info" class="link-light text-decoration-none fw-bold">Informasi</a>
+                    <a href="kontak.html" class="link-light text-decoration-none fw-bold">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="mb-5 d-flex align-items-center justify-content-center"
+            style="min-height: 100vh; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./asset/kampus-stmik.jpg); background-repeat: no-repeat; background-size: cover; position: relative;">
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="position: absolute; width: 100%; height: 100%; top: 0;">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./asset/hero image/kampus-stmik.jpg" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./asset/hero image/hero-image.jpg" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./asset/hero image/hero-image-3.jpg" class="d-block w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            <div class="container text-white text-center" style="margin-bottom: 120px;" data-aos="fade-down">
+                <h1 class="display-3">Berkembang bersama kami</h1>
+                <p>Pelatihan intensif, membantu anda dalam proses pengembangan kompetensi diri</p>
+
+                <!--<a href="#" class="fw-bold btn btn-primary px-5 py-2 rounded-pill mt-2">Bergabung</a>-->
+            </div>
+        </section>
+
+        <section id="instruksi" style="margin-top: -190px; position: relative; z-index: 2;">
+            <div class="w-75 mx-auto bg-white p-5 rounded-5 shadow-lg">
+                <div class="container-fluid">
+                    <h2 class="fw-bold text-center mb-5">Alur Pelaksanaan</h2>
+                    <div class="row row-cols-3 text-center">
+                        <div class="kotak" data-aos="zoom-in-up" data-aos-delay="100">
+                            <div class="display-4"><i class="bi bi-1-circle"></i></div>
+                            <h3 class="h5 fw-bold mt-3">Pendaftaran</h3>
+                            <p>Tentukan pilihan pelatihan dengan masuk kedalam Grup WA Kelas pelatihan pada link QR yang
+                                tertera <b>(WAJIB)</b>. Untuk mendapatkan slot informasi keikutsertaan.</p>
+                        </div>
+                        <div class="kotak" data-aos="zoom-in-up" data-aos-delay="200">
+                            <div class="display-4"><i class="bi bi-2-circle"></i></div>
+                            <h3 class="h fw-bold mt-3">Pembayaran</h3>
+                            <p>Lakukan Pembayaran sesuai dengan pelatihan dan kategori jam yang ingin anda laksanakan di
+                                loket BAUK.</p>
+                        </div>
+                        <div class="kotak" data-aos="zoom-in-up" data-aos-delay="300">
+                            <div class="display-4"><i class="bi bi-3-circle"></i></div>
+                            <h3 class="h5 fw-bold mt-3">Pelaksanaan pelatihan</h3>
+                            <p>Peserta melaksanakan melaksanakan pelatihan berdasarkan jadwal yang sudah di tetapkan
+                                oleh instruktur/dosen pengampu.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p>Pelatihan 1 hari (8 jam) Rp.250.000 / pelatihan</p>
+                        <p>Pelatihan 3 hari (24 jam) Rp.500.000 / pelatihan</p>
+                        <p>Pelatihan 5 hari (40 jam) Rp.750.000 / pelatihan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="alur-pelatihan">
+            <div class="container">
+                <div class="text-center mb-5 mt-5">
+                    <div class="bg-dark text-light d-inline-block p-4 fw-bold h1 rounded-pill d-inline-flex justify-content-center align-items-center"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-book-fill"></i>
+                    </div>
+                    <h2>Alur Pelatihan</h2>
+                    <div class="text">Berikut ini adalah alur untuk melakukan pendaftaran pelatihan</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="./asset/prosedur-pikp.png" class="position-sticky" style="top: 150px;">
+                    </div>
+                    <div class="col">
+                        <ol>
+                            <li>
+                                <div class="h4">Langkah Pertama</div>
+                                <p>PIKP memberikan data perserta yang akan mengikuti pelatihan yang kuotannya telah terpenuhi Ke BAUK.</p>
+                            </li>
+
+                            <li>
+                                <div class="h4">Langkah Kedua</div>
+                                <p>perserta ke BAUK untuk melakukan pembayaran pelatihan sesuai dengan data yang diberikan oleh PIKP.</p>
+                            </li>
+
+                            <li>
+                                <div class="h4">Langkah Ketiga</div>
+                                <p>BAUK wajib menanyakan kepada perserta terkait jenis pelatihan yang diikuti dan yang mau dibayarkan dengan ketentuan biaya sebagai berikut.</p>
+                                <p>Pelatihan 1 hari (8 jam) Rp.250.000 / pelatihan</p>
+                                <p>Pelatihan 3 hari (24 jam) Rp.500.000 / pelatihan</p>
+                                <p>Pelatihan 5 hari (40 jam) Rp.750.000 / pelatihan</p>
+                            </li>
+
+                            <li>
+                                <div class="h4">Langkah Keempat</div>
+                                <p>BAUK memberikan kode pembayaran virtual (Virtual Akun) atau slip pembayaran terkait pelatihan yang diambil kepada mahasiswa. </p>
+                            </li>
+
+                            <li>
+                                <div class="h4">Langkah Kelima</div>
+                                <p>Perserta melakukan proses pembayaran. pelatihan</p>
+                            </li>
+
+                            <li>
+                                <div class="h4">Langkah Keenam</div>
+                                <p>Setelah melakukan pembayaran peserta WAJIB mengisi Biodata untuk dimasukkan ke kelas pelatihan Dan mengupload KTM dan bukti pembayaran pelatihan
+
+                                    Melalui google form dengan cara menscan QR Code Yang telah disediakan pada poster masing-masing Pelatihan yang diikuti (poster di depan ruang PIKP). Di akhir pengisian biodata, Jangan lupa untuk mengklik link grub kelas WhatsApp yang tertera pada google form tersebut</p>
+                            </li>
+
+                            <li>
+                                <div class="h4">Langkah Ketujuh</div>
+                                <p>Informasi lebih lanjut terkait jadwal pelaksanaan pelatihan akan di informasikan melalui grup kelas whatsapp.</p>
+                            </li>
+                        </ol>
+
+
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSevImwZ5gnEzRuwuIipWCVhvoA3dXgee88aIMbiSYGXlPrjGw/viewform" class="btn btn-dark d-block w-100 fw-bold mt-5 ">Klik disini untuk memilih peminatan pelatihan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pelatihan" class="my-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="bg-dark text-light d-inline-block p-4 fw-bold h1 rounded-pill d-inline-flex justify-content-center align-items-center"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-book-fill"></i>
+                    </div>
+                    <h2>Pelatihan</h2>
+                    <div class="text">Pelatihan ini bertujuan agar mahasiswa STMIK Widya Cipta Dharma memiliki skill
+                        yang handal handal dan profesional sesuai dengan kompetensi yang dimiliki khususnya
+                        dibidang teknologi dan informasi</div>
+                </div>
+            </div>
+            <!-- Kotak Pelatihan -->
+            <div class=" fade-effect">
+                <div class="d-flex w-100 overflow-x-auto gap-4 pb-4" id="mudar">
+
+                    <!-- konten pelatihan-->
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail database-design & programming.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Database Design and Programming With SQL.</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen">Tommy Bustomi, S.kom, M.kom</div>
+                                            <div class="__durasi">24 Jam (3 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/database-design-dan-programing-dengan-sql.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail java fundamental.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Java Fundamentals</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen"> Tommy Bustomi, S.Kom, M.Kom</div>
+                                            <div class="__durasi">24 Jam (3 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/java-fundamental.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail-database design.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Database Design</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen">Tommy Bustomi, S.Kom, M.Kom</div>
+                                            <div class="__durasi"> 8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/database-design.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail-APSI.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">APSI(Analisis dan Perancangan Sistem Informasi)
+                                        </div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen"> Kusno Harianto, S.Kom., M.Kom</div>
+                                            <div class="__durasi">24 Jam (3 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/APSI.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail web programmingmenengah.png"
+                                        style="width: 400px; height: 200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Web Programming Menengah</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen">Muhammad Ibnu Sa'ad, S.Kom., M.Kom.</div>
+                                            <div class="__durasi">8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/web-menengah.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail pengolahan data.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Pengolahan Data Menggunakan Aplikasi SPSS</div>
+                                        <div class="__info-tambahan ">
+                                            <div class="__dosen">Hanifah Ekawati, S.Pd, M.Pd</div>
+                                            <div class="__durasi">8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/pengolahan-data.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail- personal brand.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Personal Brand & Media</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen">Dr. Nursobah, S.Kom, M.Kom, IPM, ASEAN Engineer.</div>
+                                            <div class="__durasi ">Kursus 8 Jam (1 Hari)</div>
+                                            <div class="_kosongan"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/Personal-brand&media.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail programming ilmu data (R lang).png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Programming Ilmu Data (R Language)</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen"> Salmon, S.Kom, M.Kom.</div>
+                                            <div class="__durasi">8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/R-Lang.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail aplikasi perkantoran.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Aplikasi Perkantoran</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen"> Salmon, S.Kom, M.Kom.</div>
+                                            <div class="__durasi">8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/aplkikasi-perkantoran.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail data manajemen staff.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Data Manajemen Staff</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen"> H. Pajar Pahrudin, S.Kom., M.H.</div>
+                                            <div class="__durasi">8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/Data-manajemen-staff.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail-TIK.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Abstraksi dan Rancangan Penelitian TIK</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen">Eka Arriyanti, S.Pd., M.Kom.</div>
+                                            <div class="__durasi">8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/Abstraksi dan Rancangan Penelitian TIK.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="pelatihan-box flex-shrink-0 bg-white shadow-sm">
+                        <div class="border p-0 rounded-2 overflow-hidden">
+                            <div class="wrap">
+                                <div class="thumbnail">
+                                    <img src="./asset/thumnail/thumnail pyhon programming.png"
+                                        style="width:400px; height:200px; object-fit: cover;">
+                                </div>
+
+                                <div class="p-4">
+                                    <div class="informasi-pelatihan">
+                                        <div class="__judul h6 m-0">Fun Python Programming</div>
+                                        <div class="__info-tambahan">
+                                            <div class="__dosen">Ita Arfyanti, S.Kom, M.M.</div>
+                                            <div class="__durasi"> 8 Jam (1 hari)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aksi mt-5">
+                                        <a href="./detail-pelatihan/fun-python.html"
+                                            class="btn btn-outline-primary d-block">Selengkapnya</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+        </section>
+        
+        
+
+         <!-- Kotak Pelatihan -->
+         <div class=" fade-effect">
+            <div class="d-flex w-100 overflow-x-auto gap-4 pb-4" id="mudar">
+
+                <!-- konten pelatihan-->
+
+                
+
+                </div>
+
+
+        
+
+        </div>
+    </section>
+
+        <section id="info" class="my-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="bg-dark text-light d-inline-block p-4 fw-bold h1 rounded-pill d-inline-flex justify-content-center align-items-center"
+                        style="width: 80px; height: 80px;">
+                        <i class="bi bi-info-circle"></i>
+                    </div>
+                    <h2>Info Terbaru</h2>
+                    <div class="text">informasi terbaru terkait kegiatan kegiatan PIKP</div>
+                </div>
+            </div>
+            <!-- Kotak Info Terbaru -->
+           <div class="container">
+                <div class="row row-cols-4 g-4">
+                    <div class="box">
+                        <div class="inner-box border">
+                            <div class="thumbnail-post">
+                                <img src="./asset/asset info kegiatan/info-kegiatan-1/berita terkini.jpg"
+                                    style="height: 200px; object-fit: cover; width: 100%;" alt="" />
+
+                                <div class="p-4 bg-white">
+                                    <div class="title-post">
+                                        <h1 class="h5">Selamat Tahun Baru.</h1>
+                                    </div>
+
+                                    <div class="title-action mt-5">
+                                        <a href="./detail-berita/Berita-1.html"
+                                            class="btn btn-outline-primary fw-bold d-block w-100">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="inner-box border">
+                            <div class="thumbnail-post">
+                                <img src="./asset/asset info kegiatan/info-kegiatan-2/info kegiatan-2.jpg"
+                                    style="height: 200px; object-fit: cover; width: 100%;" alt="" />
+
+                                <div class="p-4 bg-white">
+                                    <div class="title-post">
+                                        <h1 class="h5">Selamat Hari Raya Natal.</h1>
+                                    </div>
+
+                                    <div class="title-action mt-5">
+                                        <a href="./detail-berita/Berita-2.html"
+                                            class="btn btn-outline-primary fw-bold d-block w-100">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="inner-box border">
+                            <div class="thumbnail-post">
+                                <img src="./asset/asset info kegiatan/info-kegiatan-3/kegiatan-3.jpg"
+                                    style="height: 200px; object-fit: cover; width: 100%;" alt="" />
+
+                                <div class="p-4 bg-white">
+                                    <div class="title-post">
+                                        <h1 class="h6">Pelatihan APSI(Analisis Dan Pernacangan Sistem Informasi).</h1>
+                                    </div>
+
+                                    <div class="title-action mt-5">
+                                        <a href="./detail-berita/Berita-3.html"
+                                            class="btn btn-outline-primary fw-bold d-block w-100 ">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="inner-box border">
+                            <div class="thumbnail-post">
+                                <img src="./asset/asset info kegiatan/info-kegiatan-4/kegiatan-4.4.jpg"
+                                    style="height: 200px; object-fit: cover; width: 100%;" alt="" />
+
+                                <div class="p-4 bg-white">
+                                    <div class="title-post">
+                                        <h1 class="h6">Pelatihan Personal Brand & Media.</h1>
+                                    </div>
+
+                                    <div class="title-action mt-5">
+                                        <a href="./detail-berita/Berita-4.html"
+                                            class="btn btn-outline-primary fw-bold d-block w-100">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- <section id="contact">
+            <div class="bg-white w-50 p-5 shadow-lg rounded-2 position-relative z-2 mx-auto"
+                style="margin-bottom: -120px;">
+                <h2 class="mb-4">Kontak</h2>
+
+                <form action="#" id="pesan">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Pesan anda di sini."
+                        class="form-control"></textarea>
+
+                    <div class="container-fluid p-0 my-4">
+                        <div class="row row-cols-2">
+                            <div>
+                                <input type="text" class="form-control" placeholder="Nama anda">
+                            </div>
+                            <div>
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="text" class="form-control" placeholder="Enter subject">
+                    </div>
+
+                    <input type="submit" class="btn btn-primary fw-bold d-block w-100 mt-4" value="Kirim">
+                </form>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <!-- Kotak Pertama -->
+        <div class="kotak">
+            <div class="text-light" style="background-color: #363739; padding: 200px 0 100px 0;">
+                <div class="container">
+                    <div class="row row-cols-3">
+                        <div class="kotak">
+                            <!-- Kotak Logo -->
+                            <div class="text-center">
+                                <img src="./asset/logo(1).svg" alt="Logo" class="  rounded-pill"
+                                    style="width: 200px;height:200px;">
+                            </div>
+                        </div>
+                        <div class="kotak">
+                            <!-- Kotak Kontak -->
+                            <h2 class="mb-4 h3">Kontak</h2>
+
+                            <div class="text mb-4">
+                                Alamat:
+                                Jl. M. Yamin no 25
+                                Samarinda Kalimantan Timur
+                            </div>
+
+                            <div class="text">No Telepon: 0541 736071</div>
+                            <div class="text">Email: wicida@wicida.ac.id</div>
+                        </div>
+                        <div class="kotak">
+                            <!-- Kotak Sosial Media -->
+                            <h2 class="mb-4 h3">Sosial Media</h2>
+
+                            <a href="https://www.facebook.com/piikwicida" class="btn btn-outline-light me-2 fs-4"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/pikp.wicida/" class="btn btn-outline-light me-2 fs-4"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" class="btn btn-outline-light me-2 fs-4"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kotak Kedua -->
+        <div class="kotak">
+            <div class="bg-dark text-light py-4">
+                <div class="container">
+                    <!-- Kotak Informasi Hak Cipta -->
+                    <div class="text fw-bold text-center">PUSAT INOVASI KEWIRAUSAHAAN DAN PELATIHAN STMIK WICIDA</div>
+                    <div class="text fw-semibold text-center">© 2023 - STMIK WICIDA</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const pesan = document.getElementById('pesan');
+
+        pesan.addEventListener('submit', e => {
+            e.preventDefault();
+
+            Swal.fire("Pesan anda telah terkirim!");
+        })
+    </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="./script.js">
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
+
+</body>
+
+</html>
